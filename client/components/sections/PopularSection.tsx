@@ -5,18 +5,18 @@ import { VideoCard } from "@/components/VideoCard";
 import { VIDEOS } from "@/lib/videos";
 
 const POPULAR = [
-  { id: 1,  title: "Cuisine du Soleil",       image: "/COOKING/i21.jpg", video: VIDEOS[21], category: "Méditerranée",          rating: "4.7" },
-  { id: 2,  title: "Tempura & Sushi",         image: "/COOKING/i22.jpg", video: VIDEOS[22], category: "Cuisine Japonaise",     rating: "4.5" },
-  { id: 3,  title: "Saveurs Marines",         image: "/COOKING/i23.jpg", video: VIDEOS[23], category: "Fruits de Mer",         rating: "4.6" },
-  { id: 4,  title: "Minuit en Cuisine",       image: "/COOKING/i24.jpg", video: VIDEOS[24], category: "Compétition",           rating: "4.8" },
-  { id: 5,  title: "L'Heure du Brunch",       image: "/COOKING/i25.jpg", video: VIDEOS[25], category: "Brunch & Petit-Déj",    rating: "4.4" },
-  { id: 6,  title: "Maître Boucher",          image: "/COOKING/i26.jpg", video: VIDEOS[26], category: "Viandes & Charcuterie", rating: "4.9" },
-  { id: 7,  title: "Velours & Chocolat",      image: "/COOKING/i27.jpg", video: VIDEOS[27], category: "Chocolaterie",          rating: "4.3" },
-  { id: 8,  title: "Tempête de Saveurs",      image: "/COOKING/i28.jpg", video: VIDEOS[28], category: "Fusion",                rating: "4.6" },
-  { id: 9,  title: "Street Food Tour",        image: "/COOKING/i40.jpg", video: VIDEOS[40], category: "Street Food",           rating: "4.5" },
-  { id: 10, title: "La Dernière Recette",     image: "/COOKING/i41.jpg", video: VIDEOS[41], category: "Drame Culinaire",       rating: "4.7" },
-  { id: 11, title: "Route des Épices",        image: "/COOKING/i29.jpg", video: VIDEOS[29], category: "Voyage Culinaire",      rating: "4.4" },
-  { id: 12, title: "Écho des Saveurs",        image: "/COOKING/i30.jpg", video: VIDEOS[30], category: "Gastronomie",           rating: "4.8" },
+  { id: 1,  title: "ساندويش فيلادلفيا",        image: "/Arabic Cook/1.png",  video: VIDEOS[1],  category: "ساندويش · لحم",    rating: "4.9" },
+  { id: 2,  title: "جوانح الدجاج المقرمشة",    image: "/Arabic Cook/2.png",  video: VIDEOS[2],  category: "دجاج · بافلو",     rating: "4.8" },
+  { id: 3,  title: "فيتوتشيني ألفريدو",        image: "/Arabic Cook/3.png",  video: VIDEOS[3],  category: "مكرونة · إيطالي",  rating: "4.7" },
+  { id: 4,  title: "وصفة الدجاج المميزة",      image: "/Arabic Cook/4.png",  video: VIDEOS[4],  category: "دجاج · مشوي",      rating: "4.8" },
+  { id: 5,  title: "المكرونة بالخضار",         image: "/Arabic Cook/5.png",  video: VIDEOS[5],  category: "مكرونة · خضار",    rating: "4.6" },
+  { id: 6,  title: "كيك بالبهارات",            image: "/Arabic Cook/6.png",  video: VIDEOS[6],  category: "حلويات · كيك",     rating: "4.5" },
+  { id: 7,  title: "كفتة بصوص الطحينة",       image: "/Arabic Cook/7.png",  video: VIDEOS[7],  category: "كفتة · طحينة",     rating: "4.7" },
+  { id: 8,  title: "كباب بالصينية",            image: "/Arabic Cook/8.png",  video: VIDEOS[8],  category: "كباب · فرن",       rating: "4.8" },
+  { id: 9,  title: "ساندويش روست بيف",        image: "/Arabic Cook/9.png",  video: VIDEOS[9],  category: "ساندويش · لحم",    rating: "4.9" },
+  { id: 10, title: "ساندويش فيلادلفيا الشيف", image: "/Arabic Cook/10.png", video: VIDEOS[10], category: "ساندويش · شيف",    rating: "4.7" },
+  { id: 11, title: "تاكوز فرنسي بالدجاج",     image: "/Arabic Cook/11.png", video: VIDEOS[11], category: "تاكوز · دجاج",      rating: "4.6" },
+  { id: 12, title: "دجاج البونلس",             image: "/Arabic Cook/12.png", video: VIDEOS[12], category: "دجاج · مقلي",       rating: "4.8" },
 ];
 
 const PAGE_SIZE = 8;
@@ -35,7 +35,7 @@ export const PopularSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-2xl md:text-4xl font-cinematic text-white mb-1">Populaire sur On Cook</h2>
+            <h2 className="text-2xl md:text-4xl font-cinematic text-white mb-1">الأكثر شعبية</h2>
             <div className="w-12 h-1 bg-red-500 rounded-full" />
           </motion.div>
           <div className="flex items-center gap-3">
@@ -53,7 +53,7 @@ export const PopularSection = () => {
               <div key={movie.id} className="group cursor-pointer rounded-xl overflow-hidden">
                 <VideoCard image={movie.image} video={movie.video} title={movie.title} className="relative aspect-video rounded-xl">
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300" dir="rtl">
                     <p className="text-red-400 text-xs font-semibold">{movie.category}</p>
                     <h3 className="text-white font-cinematic text-xs mb-1 leading-tight">{movie.title}</h3>
                     <div className="flex items-center justify-between">
@@ -62,7 +62,7 @@ export const PopularSection = () => {
                         <span className="text-yellow-400 text-xs">{movie.rating}</span>
                       </div>
                       <button className="flex items-center gap-1 px-2 py-1 bg-red-600 text-white text-xs font-bold rounded-md">
-                        <Play className="w-2.5 h-2.5 fill-white" /> Lire
+                        <Play className="w-2.5 h-2.5 fill-white" /> مشاهدة
                       </button>
                     </div>
                   </div>

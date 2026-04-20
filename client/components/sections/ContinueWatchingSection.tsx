@@ -5,12 +5,12 @@ import { VideoCard } from "@/components/VideoCard";
 import { VIDEOS } from "@/lib/videos";
 
 const CONTINUE_WATCHING = [
-  { id: 1, title: "Saveurs du Monde",       image: "/COOKING/i6.jpg",  video: VIDEOS[6],  progress: 65, episode: "S3 E4",  timeLeft: "28 min restantes" },
-  { id: 2, title: "Le Grand Chef",           image: "/COOKING/i7.jpg",  video: VIDEOS[7],  progress: 42, episode: "S4 E7",  timeLeft: "44 min restantes" },
-  { id: 3, title: "Recettes Secrètes",       image: "/COOKING/i8.jpg",  video: VIDEOS[8],  progress: 88, episode: "S5 E14", timeLeft: "7 min restantes"  },
-  { id: 4, title: "Festin Sauvage",          image: "/COOKING/i9.jpg",  video: VIDEOS[9],  progress: 20, episode: "S1 E2",  timeLeft: "51 min restantes" },
-  { id: 5, title: "L'Art de la Pâtisserie", image: "/COOKING/i10.jpg", video: VIDEOS[10], progress: 55, episode: "S2 E3",  timeLeft: "32 min restantes" },
-  { id: 6, title: "Cuisine en Fête",         image: "/COOKING/i11.jpg", video: VIDEOS[11], progress: 30, episode: "S1 E5",  timeLeft: "48 min restantes" },
+  { id: 1, title: "كفتة بصوص الطحينة",    image: "/Arabic Cook/7.png",  video: VIDEOS[7],  progress: 65, timeLeft: "15 دقيقة متبقية" },
+  { id: 2, title: "كباب بالصينية",         image: "/Arabic Cook/8.png",  video: VIDEOS[8],  progress: 42, timeLeft: "22 دقيقة متبقية" },
+  { id: 3, title: "ساندويش روست بيف",     image: "/Arabic Cook/9.png",  video: VIDEOS[9],  progress: 88, timeLeft: "3 دقائق متبقية"  },
+  { id: 4, title: "تاكوز فرنسي بالدجاج", image: "/Arabic Cook/11.png", video: VIDEOS[11], progress: 20, timeLeft: "28 دقيقة متبقية" },
+  { id: 5, title: "دجاج البونلس",          image: "/Arabic Cook/12.png", video: VIDEOS[12], progress: 55, timeLeft: "18 دقيقة متبقية" },
+  { id: 6, title: "مكرونة الحبش",          image: "/Arabic Cook/15.png", video: VIDEOS[15], progress: 30, timeLeft: "25 دقيقة متبقية" },
 ];
 
 export const ContinueWatchingSection = () => {
@@ -25,7 +25,7 @@ export const ContinueWatchingSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-2xl md:text-4xl font-cinematic text-white mb-1">Continuer à regarder</h2>
+            <h2 className="text-2xl md:text-4xl font-cinematic text-white mb-1">متابعة المشاهدة</h2>
             <div className="w-12 h-1 bg-red-500 rounded-full" />
           </motion.div>
           <div className="flex gap-2">
@@ -48,7 +48,7 @@ export const ContinueWatchingSection = () => {
               <div className="h-1 bg-gray-700">
                 <motion.div className="h-full bg-red-500" initial={{ width: 0 }} whileInView={{ width: `${item.progress}%` }} viewport={{ once: true }} transition={{ duration: 1, delay: i * 0.1 }} />
               </div>
-              <div className="p-3">
+              <div className="p-3" dir="rtl">
                 <h3 className="text-white font-semibold text-sm truncate">{item.title}</h3>
                 <p className="text-gray-400 text-xs mt-0.5">{item.timeLeft}</p>
               </div>

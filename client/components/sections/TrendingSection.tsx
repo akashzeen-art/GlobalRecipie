@@ -5,13 +5,13 @@ import { VideoCard } from "@/components/VideoCard";
 import { VIDEOS } from "@/lib/videos";
 
 const TRENDING = [
-  { id: 1, title: "Saveurs du Monde",       image: "/COOKING/i11.jpg", video: VIDEOS[11], category: "Cuisine · Voyage",      rating: "4.8", rank: 1 },
-  { id: 2, title: "Le Grand Chef",           image: "/COOKING/i12.jpg", video: VIDEOS[12], category: "Compétition",           rating: "4.6", rank: 2 },
-  { id: 3, title: "Douceurs de Paris",       image: "/COOKING/i13.jpg", video: VIDEOS[13], category: "Pâtisserie",            rating: "4.5", rank: 3 },
-  { id: 4, title: "Grillades & Flammes",     image: "/COOKING/i14.jpg", video: VIDEOS[14], category: "Barbecue",              rating: "4.7", rank: 4 },
-  { id: 5, title: "Épices du Monde",         image: "/COOKING/i15.jpg", video: VIDEOS[15], category: "Cuisine Exotique",      rating: "4.4", rank: 5 },
-  { id: 6, title: "Secrets de Grand-Mère",   image: "/COOKING/i16.jpg", video: VIDEOS[16], category: "Cuisine Traditionnelle",rating: "4.3", rank: 6 },
-  { id: 7, title: "Chef en Ville",           image: "/COOKING/i17.jpg", video: VIDEOS[17], category: "Gastronomie",           rating: "4.9", rank: 7 },
+  { id: 1,  title: "مكرونة الحبش",          image: "/Arabic Cook/15.png", video: VIDEOS[15], category: "مكرونة · نكهة فخمة", rating: "4.9", rank: 1 },
+  { id: 2,  title: "اللحم المفروم",          image: "/Arabic Cook/16.png", video: VIDEOS[16], category: "لحم · خمس نجوم",    rating: "4.8", rank: 2 },
+  { id: 3,  title: "صينية الدجاج بالفرن",   image: "/Arabic Cook/17.png", video: VIDEOS[17], category: "دجاج · فرن",         rating: "4.7", rank: 3 },
+  { id: 4,  title: "مقلوبة الارز بالفول",   image: "/Arabic Cook/18.png", video: VIDEOS[18], category: "أرز · مقلوبة",      rating: "4.8", rank: 4 },
+  { id: 5,  title: "كفتة لبنانية بالفرن",   image: "/Arabic Cook/19.png", video: VIDEOS[19], category: "كفتة · بطاطس",      rating: "4.6", rank: 5 },
+  { id: 6,  title: "كفتة وبطاطا بالصينية", image: "/Arabic Cook/20.png", video: VIDEOS[20], category: "كفتة · فرن",         rating: "4.7", rank: 6 },
+  { id: 7,  title: "ساندويش فيلادلفيا",    image: "/Arabic Cook/1.png",  video: VIDEOS[1],  category: "ساندويش · لحم",    rating: "4.9", rank: 7 },
 ];
 
 export const TrendingSection = () => {
@@ -28,7 +28,7 @@ export const TrendingSection = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex items-center gap-3">
             <TrendingUp className="w-6 h-6 md:w-7 md:h-7 text-red-500" />
             <div>
-              <h2 className="text-2xl md:text-4xl font-cinematic text-white">Tendances du moment</h2>
+              <h2 className="text-2xl md:text-4xl font-cinematic text-white">الأكثر مشاهدة</h2>
               <div className="w-12 h-1 bg-red-500 rounded-full mt-1" />
             </div>
           </motion.div>
@@ -44,7 +44,7 @@ export const TrendingSection = () => {
               <span className="absolute -left-1 bottom-8 text-6xl md:text-8xl font-black text-white/10 select-none leading-none z-10">{movie.rank}</span>
               <VideoCard image={movie.image} video={movie.video} title={movie.title} className="relative aspect-video rounded-xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-3">
+                <div className="absolute bottom-0 left-0 right-0 p-3" dir="rtl">
                   <p className="text-xs text-red-400 font-semibold mb-0.5">{movie.category}</p>
                   <h3 className="text-white font-cinematic text-sm leading-tight">{movie.title}</h3>
                   <div className="flex items-center gap-1 mt-1">

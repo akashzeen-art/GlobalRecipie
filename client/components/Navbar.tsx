@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
-  { label: "Accueil",       href: "/" },
-  { label: "Tendances",     href: "#trending" },
-  { label: "Bientôt",      href: "#coming-soon" },
+  { label: "الرئيسية",   href: "/" },
+  { label: "الأكثر مشاهدة", href: "#trending" },
+  { label: "قريباً",      href: "#coming-soon" },
 ];
 
 export const Navbar = () => {
@@ -104,7 +104,7 @@ export const Navbar = () => {
                 ))}
                 <div className="pt-3 border-t border-white/10 flex gap-2">
                   <button className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold rounded-xl transition-all">
-                    Connexion
+                    تسجيل الدخول
                   </button>
                 </div>
               </div>

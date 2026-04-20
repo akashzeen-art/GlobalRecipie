@@ -4,11 +4,11 @@ import { Play, Info } from "lucide-react";
 import { VIDEOS } from "@/lib/videos";
 
 const BANNERS = [
-  { image: "/COOKING/i1.jpg",  video: VIDEOS[1],  title: "Saveurs du Monde",      genre: "Cuisine · Voyage",        desc: "Un voyage culinaire époustouflant à travers les saveurs du monde entier." },
-  { image: "/COOKING/i2.jpg",  video: VIDEOS[2],  title: "Le Grand Chef",          genre: "Compétition · Cuisine",   desc: "Dans les cuisines les plus prestigieuses, un chef hors pair relève tous les défis." },
-  { image: "/COOKING/i3.jpg",  video: VIDEOS[3],  title: "Recettes Secrètes",      genre: "Drame · Gastronomie",     desc: "Quand les recettes ancestrales révèlent leurs secrets, la magie opère." },
-  { image: "/COOKING/i4.jpg",  video: VIDEOS[4],  title: "Festin Sauvage",         genre: "Aventure · Nature",       desc: "Partez à la découverte des ingrédients sauvages là où la nature est reine." },
-  { image: "/COOKING/i5.jpg",  video: VIDEOS[5],  title: "L'Art de la Pâtisserie", genre: "Artisanat · Passion",     desc: "Au-delà des fourneaux se cache un art qui transforme la farine en chef-d'œuvre." },
+  { image: "/Arabic Cook/1.png",  video: VIDEOS[1],  title: "ساندويش فيلادلفيا",    genre: "وصفات · لحم",     desc: "ساندويش فيلادلفيا اللحم المفروم بالجبنة والبطاطس المقرمشة - تاكل اصابعك وراه!" },
+  { image: "/Arabic Cook/2.png",  video: VIDEOS[2],  title: "جوانح الدجاج المقرمشة", genre: "وصفات · دجاج",    desc: "جوانح الدجاج المقرمشة مع صلصة بافلو الحارة بمكونات بين يديك." },
+  { image: "/Arabic Cook/3.png",  video: VIDEOS[3],  title: "فيتوتشيني ألفريدو",    genre: "وصفات · مكرونة",  desc: "فيتوتشيني ألفريدو… بس النكهة مش متل أي وصفة جربتوها قبل!" },
+  { image: "/Arabic Cook/4.png",  video: VIDEOS[4],  title: "وصفة الدجاج المميزة",  genre: "وصفات · دجاج",    desc: "وصفة الدجاج اللي بتخلي البيت كله يشم ريحة الجوع!" },
+  { image: "/Arabic Cook/15.png", video: VIDEOS[15], title: "مكرونة الحبش",          genre: "وصفات · مكرونة",  desc: "مكرونة الحبش لأصحاب الذوق الصعب - نكهة فخمة ومختلفة بكل لقمة!" },
 ];
 
 export const HeroSection = () => {
@@ -50,6 +50,7 @@ export const HeroSection = () => {
             exit={{ opacity: 0, x: 40 }}
             transition={{ duration: 0.7 }}
             className="max-w-2xl space-y-3 md:space-y-5"
+            dir="rtl"
           >
             <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full tracking-widest uppercase">
               {banner.genre}
@@ -60,10 +61,10 @@ export const HeroSection = () => {
             <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-lg line-clamp-2 md:line-clamp-none">{banner.desc}</p>
             <div className="flex gap-3 pt-1">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center gap-2 px-5 py-3 md:px-8 md:py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-all text-sm md:text-base">
-                <Play className="w-4 h-4 md:w-5 md:h-5 fill-black" /> Lire maintenant
+                <Play className="w-4 h-4 md:w-5 md:h-5 fill-black" /> مشاهدة الآن
               </motion.button>
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center gap-2 px-5 py-3 md:px-8 md:py-4 bg-white/20 text-white font-semibold rounded-lg border border-white/30 hover:bg-white/30 transition-all backdrop-blur-sm text-sm md:text-base">
-                <Info className="w-4 h-4 md:w-5 md:h-5" /> Plus d'infos
+                <Info className="w-4 h-4 md:w-5 md:h-5" /> مزيد من المعلومات
               </motion.button>
             </div>
           </motion.div>

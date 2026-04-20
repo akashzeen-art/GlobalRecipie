@@ -3,27 +3,27 @@ import { VideoCard } from "@/components/VideoCard";
 import { VIDEOS } from "@/lib/videos";
 
 const CATEGORIES = [
-  { name: "Cuisine",      image: "/COOKING/i21.jpg", video: VIDEOS[21] },
-  { name: "Pâtisserie",   image: "/COOKING/i22.jpg", video: VIDEOS[22] },
-  { name: "Gastronomie", image: "/COOKING/i23.jpg", video: VIDEOS[23] },
-  { name: "Barbecue",    image: "/COOKING/i24.jpg", video: VIDEOS[24] },
-  { name: "Végétarien",  image: "/COOKING/i25.jpg", video: VIDEOS[25] },
-  { name: "Desserts",    image: "/COOKING/i26.jpg", video: VIDEOS[26] },
-  { name: "Street Food", image: "/COOKING/i27.jpg", video: VIDEOS[27] },
-  { name: "Voyage",      image: "/COOKING/i28.jpg", video: VIDEOS[28] },
+  { name: "ساندويش",    image: "/Arabic Cook/1.png",  video: VIDEOS[1]  },
+  { name: "دجاج",        image: "/Arabic Cook/2.png",  video: VIDEOS[2]  },
+  { name: "مكرونة",      image: "/Arabic Cook/3.png",  video: VIDEOS[3]  },
+  { name: "كفتة",         image: "/Arabic Cook/7.png",  video: VIDEOS[7]  },
+  { name: "كباب",          image: "/Arabic Cook/8.png",  video: VIDEOS[8]  },
+  { name: "حلويات",      image: "/Arabic Cook/6.png",  video: VIDEOS[6]  },
+  { name: "بيتزا",         image: "/Arabic Cook/13.png", video: VIDEOS[13] },
+  { name: "مقلوبة",       image: "/Arabic Cook/18.png", video: VIDEOS[18] },
 ];
 
 export const CategoriesSection = () => {
   return (
     <section id="categories" className="relative py-10 md:py-16 overflow-hidden bg-zinc-900">
       <div className="absolute inset-0">
-        <img src="/COOKING/i29.jpg" alt="" className="w-full h-full object-cover opacity-10" />
+        <img src="/Arabic Cook/5.png" alt="" className="w-full h-full object-cover opacity-10" />
       </div>
       <div className="absolute inset-0 bg-zinc-900/80" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-6 md:mb-8">
-          <h2 className="text-2xl md:text-4xl font-cinematic text-white mb-1">Nos catégories</h2>
+          <h2 className="text-2xl md:text-4xl font-cinematic text-white mb-1">التصنيفات</h2>
           <div className="w-12 h-1 bg-red-500 rounded-full" />
         </motion.div>
 

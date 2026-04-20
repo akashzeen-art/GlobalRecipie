@@ -131,7 +131,7 @@ export const LoadingSpinner = ({ onComplete, duration = 8 }: LoadingSpinnerProps
               transition={{ duration: 0.6, delay: 1.4 }}
               className="text-gray-400 text-sm md:text-base tracking-widest uppercase"
             >
-              Divertissement Culinaire Premiumg
+              وصفات عربية أصيلة
             </motion.p>
 
             {/* Progress bar */}
@@ -149,7 +149,7 @@ export const LoadingSpinner = ({ onComplete, duration = 8 }: LoadingSpinnerProps
                 />
               </div>
               <div className="flex justify-between mt-1.5">
-                <span className="text-gray-600 text-xs">Chargement</span>
+                <span className="text-gray-600 text-xs">جارٍ التحميل</span>
                 <span className="text-gray-500 text-xs">{Math.round(progress)}%</span>
               </div>
             </motion.div>
