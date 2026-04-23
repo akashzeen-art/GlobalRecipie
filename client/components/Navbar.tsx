@@ -33,7 +33,7 @@ export const Navbar = () => {
       {/* Scroll progress bar */}
       <div
         className="fixed top-0 left-0 h-[2px] bg-gradient-to-r from-red-600 to-orange-500 z-[60] transition-all duration-150"
-        style={{ width: `${progress}%` }}
+        style={{ width: `${progress}%`, direction: "ltr" }}
       />
 
       <motion.nav
