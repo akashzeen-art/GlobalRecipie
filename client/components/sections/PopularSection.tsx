@@ -41,8 +41,8 @@ export const PopularSection = () => {
           <div className="flex items-center gap-3">
             <span className="text-gray-500 text-sm">{page + 1} / {totalPages}</span>
             <div className="flex gap-2">
-              <button onClick={() => go(-1)} disabled={page === 0} className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all disabled:opacity-30"><ChevronLeft className="w-5 h-5" /></button>
               <button onClick={() => go(1)} disabled={page === totalPages - 1} className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all disabled:opacity-30"><ChevronRight className="w-5 h-5" /></button>
+              <button onClick={() => go(-1)} disabled={page === 0} className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all disabled:opacity-30"><ChevronLeft className="w-5 h-5" /></button>
             </div>
           </div>
         </div>

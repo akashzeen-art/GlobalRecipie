@@ -30,7 +30,7 @@ export const VideoCard = ({ image, video, title, className = "", children }: Vid
   return (
     <>
       <div
-        className={`relative overflow-hidden cursor-pointer ${className}`}
+        className={`group relative overflow-hidden cursor-pointer ${className}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={() => setOpen(true)}
